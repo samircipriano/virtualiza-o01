@@ -5,10 +5,10 @@
  # Author: Subhash (serverkaka.com)  
    
  ## Check if running as root  
- #if [ "$(id -u)" != "0" ]; then  
- # echo "This script must be run as root" 1>&2  
- #  exit 1  
- #fi  
+ if [ "$(id -u)" != "0" ]; then  
+  echo "This script must be run as root" 1>&2  
+   exit 1  
+ fi  
    
  ## check Current directory  
  pwd=$(pwd)  
